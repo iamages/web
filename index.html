@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Iamages</title>
+    <meta name="description" content="Easy image sharing.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="assets/css/lib/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/lib/fontawesome/css/all.min.css">
+  </head>
+  <body class="has-navbar-fixed-top">
+    <nav id="navbar" class="navbar is-fixed-top is-display-none">
+      <div class="navbar-brand">
+        <a class="navbar-item is-unselectable" href="index.html">
+          <img class="openrevise-logo-light" src="assets/icons/image-96.png" width="28" height="28" alt="OpenRevise logo">
+        </a>
+        <a id="navbar-burger" class="navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div id="navbar-menu" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="index.html" class="navbar-item is-tab is-unselectable is-active">
+            <span class="icon"><i class="fas fa-poll"></i></span>
+            <span>Latest</span>
+          </a>
+          <a href="upload.html" class="navbar-item is-tab is-unselectable">
+            <span class="icon"><i class="fas fa-cloud-upload-alt"></i></span>
+            <span>Upload</span>
+          </a>
+          <a href="user.html" class="navbar-item is-tab is-unselectable">
+            <span class="icon"><i class="fas fa-book-open"></i></span>
+            <span>Account</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Latest</h1>
+        <hr>
+      </div>
+      <div id="image-cards-container" class="container">
+        <div class="columns">
+          <div id="image-cards-column-1" class="column"></div>
+          <div id="image-cards-column-2" class="column"></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Iamages</strong> by <a href="https://jkelol111.github.io">jkelol111</a>. The source code is published on
+          <a href="http://github.com/iamages">GitHub</a>. The website content belongs to their respective owners.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="assets/js/iamages-api.js" defer></script>
+  <script src="assets/js/init.js" defer></script>
+  <script src="assets/js/image-cards.js"></script>
+  <script src="assets/js/latest.js" defer></script>
+  <script src="assets/js/hamburger-toggle.js" defer></script>
+</html>
