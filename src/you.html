@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Iamages</title>
+    <meta name="description" content="Easy image sharing.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="assets/css/lib/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/lib/animate.min.css">
+  </head>
+  <body class="has-navbar-fixed-top">
+    <nav id="navbar" class="navbar is-fixed-top is-display-none">
+      <div class="navbar-brand">
+        <a class="navbar-item is-unselectable" href="index.html">
+          <img class="openrevise-logo-light" src="assets/icons/image-96.png" width="28" height="28" alt="OpenRevise logo">
+        </a>
+        <a id="navbar-burger" class="navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div id="navbar-menu" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="latest.html" class="navbar-item is-tab is-unselectable">
+            <span class="icon"><i class="fas fa-poll"></i></span>
+            <span>Latest</span>
+          </a>
+          <a href="upload.html" class="navbar-item is-tab is-unselectable">
+            <span class="icon"><i class="fas fa-cloud-upload-alt"></i></span>
+            <span>Upload</span>
+          </a>
+          <a href="you.html" class="navbar-item is-tab is-unselectable is-active">
+            <span class="icon"><i class="fas fa-book-open"></i></span>
+            <span>You</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <nav class="level is-mobile">
+          <div class="level-left">
+            <div class="level-item">
+              <h1 id="user-name-label" class="title">No username</h1>
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              <div class="field has-addons">
+                <div class="control">
+                  <button id="user-info-button" class="button" disabled>
+                    <span class="icon">
+                      <i class="fas fa-user-cog"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="control">
+                  <button id="user-login-button" class="button is-link" disabled>
+                    <span class="icon">
+                      <i id="user-login-button-icon" class="fas fa-sign-in-alt"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="control">
+                  <button id="reload-button" class="button is-link" disabled>
+                    <span class="icon">
+                      <i class="fas fa-sync-alt"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <hr>
+      </div>
+      <div id="image-cards-container" class="container">
+        <div class="columns">
+          <div id="image-cards-column-1" class="column"></div>
+          <div id="image-cards-column-2" class="column"></div>
+        </div>
+      </div>
+    </section>
+    <div id="login-modal" class="modal">
+      <div class="modal-background animate__animated" data-bulma-modal="close"></div>
+      <div class="modal-card animate__animated">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Login</p>
+          <button class="delete" data-bulma-modal="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="container">
+            <div class="field">
+              <label class="label">Username</label>
+              <div class="control has-icons-left">
+                <input id="login-modal-username-input" class="input" type="text" placeholder="username">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control has-icons-left">
+                <input id="login-modal-password-input" class="input" type="password" placeholder="password">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-key"></i>
+                </span>
+              </div>
+              <p id="login-modal-login-failed-blurb" class="help is-danger is-hidden">
+                The login attempt was not successful. Please try again using different credentials or try again later.
+              </p>
+            </div> 
+            <div class="field">
+              <div class="control">
+                <label class="checkbox is-unselectable">
+                  <input id="login-modal-save-login-checkbox" type="checkbox">
+                  Save my login details.
+                </label>
+              </div>
+            </div>
+            <hr>
+            <div class="content">
+              <p>
+                By using the service, you agree to our 
+                <a href="https://iamages.uber.space/iamages/api/private/tos">Terms of Service</a> 
+                and
+                <a href="https://iamages.uber.space/iamages/api/private/privacy" target="_blank">Privacy Policy</a>.
+              </p>
+            </div>     
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button id="login-modal-login-button" class="button is-primary">Login</button>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script src="assets/js/lib/iamages/iamages-api.js" defer></script>
+  <script src="assets/js/lib/iamages/iamages-auth.js" defer></script>
+  <script src="assets/js/lib/bulma/bulma-toast.min.js" defer></script>
+  <script src="assets/js/lib/bulma/bulma-modal.js" defer></script>
+  <script src="assets/js/init.js" defer></script>
+  <script src="assets/js/lib/image-cards.js" defer></script>
+  <script src="assets/js/you.js" defer></script>
+</html>

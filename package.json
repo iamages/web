@@ -1,0 +1,24 @@
+{
+  "name": "iamages-web",
+  "productName": "Iamages",
+  "version": "1.0.0",
+  "description": "Iamages web/desktop client.",
+  "main": "desktop.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamages/web.git"
+  },
+  "author": "jkelol111 et al.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamages/web/issues"
+  },
+  "homepage": "https://github.com/iamages/web#readme",
+  "devDependencies": {
+    "electron": "^11.2.1"
+  }
+}
